@@ -13,7 +13,7 @@ This application is designed to count the amount of times your inputted word app
   * **Output:** "A"
 
 2. The program should take a single letter and be able to return a boolean against another letter.
-  * **Input:** "A" == "A"
+  * **Input:** "A" **Input:**  "A"
   * **Output:** true
-  * **Input:** "A" == "B"
+  * **Input:** "A" **Input:**  "B"
   * **Output:** false

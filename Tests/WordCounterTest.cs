@@ -1,12 +1,27 @@
 using System;
 using Xunit;
 using System.Collections.Generic;
-using ScrabbleCalc.Objects;
+using WordCounter.Objects;
 
 namespace WordCounter
 {
-  public class WordCounterTest
+  public class RepeatCounterTest
   {
+    [Fact]
+    public void Test1_InputA_True()
+    {
+      //Arrange
+      string userInput = "A";
+      string checkText = "A";
+      bool expResult = true;
+
+      //Act
+      RepeatCounter testMethod = new RepeatCounter(userInput, checkText);
+      bool result = testMethod.CountRepeatsBool();
+
+      //Assert
+      Assert.Equal(expResult, result);
+    }
 
   }
 }
