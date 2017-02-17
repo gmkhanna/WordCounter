@@ -6,37 +6,26 @@ namespace WordCounter.Objects
   public class RepeatCounter
   {
     private string _initialWord;
-    private string _checkText;
+    private string _text;
 
-    public RepeatCounter(string initialWord, string checkText)
+    public RepeatCounter(string initialWord, string text)
     {
+
       _initialWord = initialWord;
-      _checkText = checkText;
-
+      _text = text;
     }
 
-    public bool CountRepeatsBool()
+    public int GetCount()
     {
-      if (_initialWord == _checkText)
+      int count = 0;
+      string wordToUpper = _initialWord.ToUpper();
+      string textToUpper = _text.ToUpper();
+
+      if(wordToUpper == textToUpper)
       {
-          return true;
+        count+= 1;
       }
-      else
-      {
-        return false;
-      }
+    return count;
     }
-
-    // public string stringToCharCompare()
-    // {
-    //   char[] initialToChar = _initialWord.ToCharArray();
-    //   char[] textToChar = _checkText.ToCharArray();
-    //   {
-    //     return initialToChar + textToChar;
-    //     Console.WriteLine(initialToChar);
-    //     Console.WriteLine(textToChar);
-    //   }
-    // }
-
   }
 }

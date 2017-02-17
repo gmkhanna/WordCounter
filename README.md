@@ -20,6 +20,6 @@ This application is designed to count the amount of times your inputted word app
   * **Input:** "AT" **Input:**  "AG"
   * **Output:** false
 
-2. The program is able to return a character array from an initial string input as well as the text input and see if they are the same.
+3. The program is able to compare a string of more than two characters, and return a boolean against another string of more than two characters regardless of case.
   * **Input:** "TEA" **Input:**  "TEA"
   * **Output:** true

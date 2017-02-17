@@ -7,37 +7,54 @@ namespace WordCounter
 {
   public class RepeatCounterTest
   {
+    // [Fact]
+    // public void Test1_InputA_True()
+    // {
+    //   //Arrange
+    //   string userInput = "A";
+    //   string checkText = "A";
+    //   bool expResult = true;
+    //
+    //   //Act
+    //   RepeatCounter testMethod = new RepeatCounter(userInput, checkText);
+    //   bool result = testMethod.CountRepeatsBool();
+    //
+    //   //Assert
+    //   Assert.Equal(expResult, result);
+    // }
+    //
+    // [Fact]
+    // public void Test2_InputAT_True()
+    // {
+    //   //Arrange
+    //   string userInput = "buffalo";
+    //   string checkText = "buffalo";
+    //   bool expResult = true;
+    //
+    //   //Act
+    //   RepeatCounter testMethod = new RepeatCounter(userInput, checkText);
+    //   bool result = testMethod.CountRepeatsBool();
+    //
+    //   //Assert
+    //   Assert.Equal(expResult, result);
+    // }
+    //
     [Fact]
-    public void Test1_InputA_True()
+    public void Test3_InputAnyCaseWord_1()
     {
       //Arrange
-      string userInput = "A";
-      string checkText = "A";
-      bool expResult = true;
+      string userInput = "Buffalo";
+      string checkText = "buFFaLo";
+      int expResult = 1;
 
       //Act
-      RepeatCounter testMethod = new RepeatCounter(userInput, checkText);
-      bool result = testMethod.CountRepeatsBool();
+      RepeatCounter testFunc = new RepeatCounter(userInput, checkText);
+      int result = testFunc.GetCount();
 
       //Assert
       Assert.Equal(expResult, result);
     }
 
-    [Fact]
-    public void Test2_InputAT_True()
-    {
-      //Arrange
-      string userInput = "BUFFALO";
-      string checkText = "BUFFALO";
-      bool expResult = true;
-
-      //Act
-      RepeatCounter testMethod = new RepeatCounter(userInput, checkText);
-      bool result = testMethod.CountRepeatsBool();
-
-      //Assert
-      Assert.Equal(expResult, result);
-    }
 
     // [Fact]
     // public void Test3_InputTEA_TEATEA()
