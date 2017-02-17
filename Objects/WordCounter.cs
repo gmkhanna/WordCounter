@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Linq;
 
 namespace WordCounter.Objects
 {
@@ -40,16 +41,23 @@ namespace WordCounter.Objects
     //   return count;
     // }
 
-    public bool GetContains()
+    public int GetContains()
     {
-      if (_text.Contains(_initialWord))
+      int counter = 0;
+      string[] wordSet = _text.Split();
+
+      StringComparison comp = StringComparison.OrdinalIgnoreCase;
+
+      foreach(string word in wordSet)
+      if ((comp, wordSet.Contains(word, comp) == true))
       {
-        return true;
+        counter+= 1;
       }
       else
       {
-        return false;
+        counter+= 0;
       }
+      return counter;
     }
 
 

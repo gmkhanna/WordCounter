@@ -126,12 +126,12 @@ namespace WordCounter
     {
       //Arrange
       string userInput = "buffalo";
-      string checkText = "The buffalo is large. Buffalo is my name, and buffalo's are strong. 'bUFFULOEs' is not how you spell the plural version of the word 'buffalo'. and buffaloies and buffaloly is also wrong.";
-      bool expResult = true;
+      string checkText = "The buffalo is large. Buffalo is my name, and buffalo's are strong, buffalo, buffalo. 'bUFFULOEs' is not how you spell the plural version of the word 'buffalo'. and buffaloies and buffaloly is also wrong.";
+      int expResult = 5;
 
       //Act
       RepeatCounter testFunc = new RepeatCounter(userInput, checkText);
-      bool result = testFunc.GetContains();
+      int result = testFunc.GetContains();
 
       //Assert
       Assert.Equal(expResult, result);
