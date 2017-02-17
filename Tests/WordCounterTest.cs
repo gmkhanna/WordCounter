@@ -89,21 +89,54 @@ namespace WordCounter
     //   Assert.Equal(expResult, result);
     // }
 
+    // [Fact]
+    // public void Test6_SplitText_8()
+    // {
+    //   //Arrange
+    //   string userInput = "buffalo";
+    //   string checkText = "The buffalo is large. Buffalo is my name.";
+    //   int expResult = 2;
+    //
+    //   //Act
+    //   RepeatCounter testFunc = new RepeatCounter(userInput, checkText);
+    //   int result = testFunc.GetCount();
+    //
+    //   //Assert
+    //   Assert.Equal(expResult, result);
+    // }
+
+    // [Fact]
+    // public void Test7_CountWithSpecChar_3()
+    // {
+    //   //Arrange
+    //   string userInput = "buffalo";
+    //   string checkText = "The buffalo is large. Buffalo is my name, and buffalo's are strong. 'bUFFULOEs' is not how you spell the plural version of the word 'buffalo'. and buffaloies and buffaloly is also wrong.";
+    //   int expResult = 3;
+    //
+    //   //Act
+    //   RepeatCounter testFunc = new RepeatCounter(userInput, checkText);
+    //   int result = testFunc.GetCount();
+    //
+    //   //Assert
+    //   Assert.Equal(expResult, result);
+    // }
+
     [Fact]
-    public void Test6_SplitText_8()
+    public void Test7_Contains_True()
     {
       //Arrange
       string userInput = "buffalo";
-      string checkText = "The buffalo is large. Buffalo is my name.";
-      int expResult = 2;
+      string checkText = "The buffalo is large. Buffalo is my name, and buffalo's are strong. 'bUFFULOEs' is not how you spell the plural version of the word 'buffalo'. and buffaloies and buffaloly is also wrong.";
+      bool expResult = true;
 
       //Act
       RepeatCounter testFunc = new RepeatCounter(userInput, checkText);
-      int result = testFunc.GetCount();
+      bool result = testFunc.GetContains();
 
       //Assert
       Assert.Equal(expResult, result);
     }
+
 
   }
 }

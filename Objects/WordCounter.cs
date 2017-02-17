@@ -16,28 +16,43 @@ namespace WordCounter.Objects
       _text = text;
     }
 
-    public int GetCount()
+    // public int GetCount()
+    // {
+    //   int count = 0;
+    //
+    //   string wordToUpper = _initialWord.ToUpper();
+    //   int wordToUpperLength = wordToUpper.Length;
+    //
+    //   string textToUpper = _text.ToUpper();
+    //   string[] wordSet = textToUpper.Split();
+    //
+    //   foreach(string word in wordSet)
+    //   {
+    //     if (wordToUpper == word || wordToUpper + "'S" == word || wordToUpper + "ES" == word || wordToUpper + "LY" == word || wordToUpper + "S" == word || wordToUpper + "IES" == word)
+    //     {
+    //       count+= 1;
+    //     }
+    //     else
+    //     {
+    //       count+= 0;
+    //     }
+    //   }
+    //   return count;
+    // }
+
+    public bool GetContains()
     {
-      int count = 0;
-
-      string wordToUpper = _initialWord.ToUpper();
-
-      string textToUpper = _text.ToUpper();
-      string[] wordSet = textToUpper.Split();
-
-      foreach(string word in wordSet)
+      if (_text.Contains(_initialWord))
       {
-        if (wordToUpper == word)
-        {
-          count+= 1;
-        }
-        else
-        {
-          count+= 0;
-        }
+        return true;
       }
-      return count;
+      else
+      {
+        return false;
+      }
     }
+
+
 
   }
 }
