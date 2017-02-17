@@ -55,20 +55,20 @@ namespace WordCounter
     //   Assert.Equal(expResult, result);
     // }
 
-    [Fact]
-    public void Test4_SplitText_8()
-    {
-      //Arrange
-      string checkText = "The buffalo is large. Buffalo is my name.";
-      int expResult = 8;
-
-      //Act
-      RepeatCounter testFunc = new RepeatCounter(checkText);
-      int result = testFunc.GetCount();
-
-      //Assert
-      Assert.Equal(expResult, result);
-    }
+    // [Fact]
+    // public void Test4_SplitText_8()
+    // {
+    //   //Arrange
+    //   string checkText = "The buffalo is large. Buffalo is my name.";
+    //   int expResult = 8;
+    //
+    //   //Act
+    //   RepeatCounter testFunc = new RepeatCounter(checkText);
+    //   int result = testFunc.GetCount();
+    //
+    //   //Assert
+    //   Assert.Equal(expResult, result);
+    // }
 
 
     // [Fact]
@@ -89,6 +89,21 @@ namespace WordCounter
     //   Assert.Equal(expResult, result);
     // }
 
+    [Fact]
+    public void Test6_SplitText_8()
+    {
+      //Arrange
+      string userInput = "buffalo";
+      string checkText = "The buffalo is large. Buffalo is my name.";
+      int expResult = 2;
+
+      //Act
+      RepeatCounter testFunc = new RepeatCounter(userInput, checkText);
+      int result = testFunc.GetCount();
+
+      //Assert
+      Assert.Equal(expResult, result);
+    }
 
   }
 }

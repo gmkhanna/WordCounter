@@ -26,8 +26,12 @@ This application is designed to count the amount of times your inputted word app
 
 4. The program is able to split an entire text into an array of strings.
   * **Input:**  "The buffalo is large. Buffalo is my name."
-  * **Output:** 8
+  * **Output:** "The" "buffalo" "is" "large". "Buffalo" "is" "my" "name."
 
-5. The program is able to compare a string to a text of more than one word and return a count +1 for every word which is equal.
-  * **Input:** "Buffalo" **Input:**  "The buffalo is large. Buffalo is my name."
-  * **Output:** 2
+6. The program is able to count the number of strings in a text set.
+* **Input:** "The" "buffalo" "is" "large". "Buffalo" "is" "my" "name."
+* **Output:** 8
+
+7. The program is able to count the number of words in the text string which are equal to the initial inputted word.
+* **Input:** "Buffalo" **Input:**  "The buffalo is large. Buffalo is my name."
+* **Output:** 2
