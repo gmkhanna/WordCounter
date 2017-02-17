@@ -3,9 +3,9 @@ using Xunit;
 using System.Collections.Generic;
 using ScrabbleCalc.Objects;
 
-namespace ScrabbleCalc
+namespace WordCounter
 {
-  public class ScrabbleCalcTest
+  public class WordCounterTest
   {
 
   }

@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 
-namespace ScrabbleCalc.Objects
+namespace WordCounter.Objects
 {
-  public class ScrabbleCalc
+  public class WordCounter
   {
   }
 
