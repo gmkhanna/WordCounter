@@ -5,27 +5,57 @@ namespace WordCounter.Objects
 {
   public class RepeatCounter
   {
-    private string _initialWord;
+    // private string _initialWord;
     private string _text;
 
-    public RepeatCounter(string initialWord, string text)
+//string initialWord,
+    public RepeatCounter(string text)
     {
 
-      _initialWord = initialWord;
+      // _initialWord = initialWord;
       _text = text;
     }
 
+
     public int GetCount()
     {
-      int count = 0;
-      string wordToUpper = _initialWord.ToUpper();
-      string textToUpper = _text.ToUpper();
+      int wordCount = 0;
 
-      if(wordToUpper == textToUpper)
+      string textToUpper = _text.ToUpper();
+      string[] wordSet = textToUpper.Split();
+
+      foreach(string word in wordSet)
       {
-        count+= 1;
+        wordCount+= 1;
       }
-    return count;
+        return wordCount;
     }
+
+    // public int GetCount()
+    // {
+    //   int count = 0;
+    //   int textCount = 0;
+    //
+    //
+    //   string wordToUpper = _initialWord.ToUpper();
+    //
+    //   string textToUpper = _text.ToUpper();
+    //   string[] wordSet = textToUpper.Split();
+    //
+    //   foreach(string word in wordSet)
+    //   {
+    //     if (wordToUpper = word)
+    //     {
+    //       count+= 1;
+    //     }
+    //     else
+    //     {
+    //       count+= 0;
+    //     }
+    //     return count;
+    //
+    //   }
+    // }
+
   }
 }
