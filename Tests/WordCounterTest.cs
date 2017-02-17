@@ -23,5 +23,21 @@ namespace WordCounter
       Assert.Equal(expResult, result);
     }
 
+    [Fact]
+    public void Test2_InputAT_True()
+    {
+      //Arrange
+      string userInput = "AT";
+      string checkText = "AT";
+      bool expResult = true;
+
+      //Act
+      RepeatCounter testMethod = new RepeatCounter(userInput, checkText);
+      bool result = testMethod.CountRepeatsBool();
+
+      //Assert
+      Assert.Equal(expResult, result);
+    }
+
   }
 }
