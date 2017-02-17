@@ -27,5 +27,16 @@ namespace WordCounter.Objects
       }
     }
 
+    public string stringToCharCompare()
+    {
+      char[] initialToChar = _initialWord.ToCharArray();
+      char[] textToChar = _checkText.ToCharArray();
+      {
+        return initialToChar + textToChar
+        Console.WriteLine(initialToChar);
+        Console.WriteLine(textToChar);
+      }
+    }
+
   }
 }
