@@ -1,0 +1,50 @@
+
+body {
+  background-color: #2b2a2b;
+  color: white;
+}
+
+.jumbotron {
+  margin-top: 5%;
+  border-bottom-style: outset;
+  border-left-style: groove;
+  border-color: #f371ff;
+}
+
+.container {
+  border-left-style: inset;
+  margin-top: 3%;
+  border-width: 4px;
+  border-color: red;
+  text-shadow: 3px 3px 3px #451d82;
+}
+
+#enterText {
+margin-left: 33%;
+}
+
+#wordInput {
+  color: #451d82;
+}
+
+#wordInput:hover {
+  border-color: #451d82;
+  border-width: 4px;
+}
+
+#textInput {
+  width: 470px;
+  height: 200px;
+  color: #451d82;
+}
+
+#textInput:hover {
+  border-color: #451d82;
+  border-width: 4px;
+}
+
+.btn {
+  margin-top: 30%;
+  background-color: #451d82;
+
+}

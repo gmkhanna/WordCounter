@@ -1,0 +1,32 @@
+@{
+  Layout = "Shared/_Layout.cshtml";
+}
+
+<div class="row">
+  <div class="forms">
+    <form action="/output" method="post">
+      <div class="col-md-2" id="enterWord">
+      <label for="word"><h3>Enter Word</h3></label>
+      <input class="form" type="text" name="word" id="wordInput"  required>
+    </div>
+    <div class="col-md-2">
+      <label for="text" id="enterText"><h3>Enter Text</h3></label>
+    </div>
+    <div class="col-md-6">
+      <input class="form" type="text" name="text" id="textInput" required>
+    </div>
+    <div class="col-md-2">
+      <button class="btn" type="submit" name="button">Submit</button>
+    </div>
+    </form>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+  </div>
+  <div class="col-md-4">
+    <h1>@totalCount</h1>
+  </div>
+  <div class="col-md-4">
+  </div>
+</div>

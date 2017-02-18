@@ -1,9 +1,8 @@
 using System;
 using Xunit;
 using System.Collections.Generic;
-using WordCounter.Objects;
 
-namespace WordCounter
+namespace RepeatCounter
 {
   public class RepeatCounterTest
   {
@@ -49,7 +48,7 @@ namespace WordCounter
     //
     //   //Act
     //   RepeatCounter testFunc = new RepeatCounter(userInput, checkText);
-    //   int result = testFunc.GetCount();
+    //   int result = testFunc.CountRepeats();
     //
     //   //Assert
     //   Assert.Equal(expResult, result);
@@ -64,7 +63,7 @@ namespace WordCounter
     //
     //   //Act
     //   RepeatCounter testFunc = new RepeatCounter(checkText);
-    //   int result = testFunc.GetCount();
+    //   int result = testFunc.CountRepeats();
     //
     //   //Assert
     //   Assert.Equal(expResult, result);
@@ -81,7 +80,7 @@ namespace WordCounter
     //
     //   //Act
     //   RepeatCounter testMethod = new RepeatCounter(userInput, checkText);
-    //   bool result = testMethod.stringToCharCompare();
+    //   bool result = testMethod.CountRepeats();
     //
     //   //Assert
     //   Console.WriteLine(expResult);
@@ -99,43 +98,43 @@ namespace WordCounter
     //
     //   //Act
     //   RepeatCounter testFunc = new RepeatCounter(userInput, checkText);
-    //   int result = testFunc.GetCount();
-    //
-    //   //Assert
-    //   Assert.Equal(expResult, result);
-    // }
-
-    // [Fact]
-    // public void Test7_CountWithSpecChar_3()
-    // {
-    //   //Arrange
-    //   string userInput = "buffalo";
-    //   string checkText = "The buffalo is large. Buffalo is my name, and buffalo's are strong. 'bUFFULOEs' is not how you spell the plural version of the word 'buffalo'. and buffaloies and buffaloly is also wrong.";
-    //   int expResult = 3;
-    //
-    //   //Act
-    //   RepeatCounter testFunc = new RepeatCounter(userInput, checkText);
-    //   int result = testFunc.GetCount();
+    //   int result = testFunc.CountRepeats();
     //
     //   //Assert
     //   Assert.Equal(expResult, result);
     // }
 
     [Fact]
-    public void Test7_Contains_True()
+    public void Test7_CountWithSpecChar_3()
     {
       //Arrange
       string userInput = "buffalo";
-      string checkText = "The buffalo is large. Buffalo is my name, and buffalo's are strong, buffalo, buffalo. 'bUFFULOEs' is not how you spell the plural version of the word 'buffalo'. and buffaloies and buffaloly is also wrong.";
+      string checkText = "The buffalo is large. Buffalo is my name, and buffalo's are strong. 'bUFFULOEs' is not how you spell the plural version of the word 'buffalo'. and buffaloies and buffaloly is also wrong.";
       int expResult = 5;
 
       //Act
       RepeatCounter testFunc = new RepeatCounter(userInput, checkText);
-      int result = testFunc.GetContains();
+      int result = testFunc.CountRepeats();
 
       //Assert
       Assert.Equal(expResult, result);
     }
+
+    // [Fact]
+    // public void Test8_Contains_True()
+    // {
+    //   //Arrange
+    //   string userInput = "buffalo";
+    //   string checkText = "The buffalo is large. Buffalo is my name, and buffalo's are strong, buffalo, buffalo. 'bUFFULOEs' is not how you spell the plural version of the word 'buffalo'. and buffaloies and buffaloly is also wrong.";
+    //   int expResult = 5;
+    //
+    //   //Act
+    //   RepeatCounter testFunc = new RepeatCounter(userInput, checkText);
+    //   int result = testFunc.CountRepeats();
+    //
+    //   //Assert
+    //   Assert.Equal(expResult, result);
+    // }
 
 
   }
