@@ -12,9 +12,10 @@ namespace RepeatCounter
         return View["index.cshtml"];
       };
 
-      Post["/output"] = _ => {
+      Post["/counted-words"] = _ => {
         RepeatCounter wordCount = new RepeatCounter(Request.Form["/word"], Request.Form["/text"]);
-        return View["index.cshtml", wordCount];
+        int countedWords = wordCount.CountRepeats();
+        return View["index.cshtml", countedWords];
       };
 
       // Post["/submit"] = _ => {

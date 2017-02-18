@@ -105,12 +105,12 @@ namespace RepeatCounter
     // }
 
     [Fact]
-    public void Test7_CountWithSpecChar_3()
+    public int Test7_CountWithSpecChar_3()
     {
       //Arrange
       string userInput = "buffalo";
-      string checkText = "The buffalo is large. Buffalo is my name, and buffalo's are strong. 'bUFFULOEs' is not how you spell the plural version of the word 'buffalo'. and buffaloies and buffaloly is also wrong.";
-      int expResult = 5;
+      string checkText = "The buffalo is large.";
+      int expResult = 1;
 
       //Act
       RepeatCounter testFunc = new RepeatCounter(userInput, checkText);

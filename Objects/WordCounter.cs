@@ -7,7 +7,6 @@ namespace RepeatCounter
   {
     private string _initialWord;
     private string _text;
-    private int _count;
 
 
     public RepeatCounter(string initialWord, string text)
@@ -19,8 +18,7 @@ namespace RepeatCounter
 
     public int CountRepeats()
     {
-      int _count = 0;
-
+      int count = 0;
       string wordToUpper = _initialWord.ToUpper();
       int wordToUpperLength = wordToUpper.Length;
 
@@ -31,20 +29,25 @@ namespace RepeatCounter
       {
         if (wordToUpper == word || wordToUpper + "'S" == word || wordToUpper + "ES" == word || wordToUpper + "LY" == word || wordToUpper + "S" == word || wordToUpper + "IES" == word)
         {
-          _count+= 1;
+           count++;
         }
-        else
-        {
-          _count+= 0;
         }
+        return count;
       }
-      return _count;
     }
+  }
 
-    public int GetCount()
-    {
-      return _count;
-    }
+  // public int CountRepeats()
+  // {
+  //   if (_count == -100)
+  //   {
+  //   return -100;
+  //   }
+  //     else
+  //     {
+  //       return _count;
+  //     }
+  //   }
 
     // public int GetContains()
     // {
@@ -64,6 +67,26 @@ namespace RepeatCounter
     //   }
     //   return counter;
     // }
-
-  }
-}
+//
+// public int CountRepeats()
+// {
+//   int _count = 0;
+//   string wordToUpper = _initialWord.ToUpper();
+//   int wordToUpperLength = wordToUpper.Length;
+//
+//   string textToUpper = _text.ToUpper();
+//   string[] wordSet = textToUpper.Split();
+//
+//   foreach(string word in wordSet)
+//   {
+//     if (wordToUpper == word || wordToUpper + "'S" == word || wordToUpper + "ES" == word || wordToUpper + "LY" == word || wordToUpper + "S" == word || wordToUpper + "IES" == word)
+//     {
+//       _count += 1;
+//     }
+//     else
+//     {
+//       _count  = -100;
+//     }
+//   }
+//   return _count;
+// }
