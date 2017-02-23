@@ -21,5 +21,21 @@ namespace RepeatCounterApp
           Assert.Equal(testResult, 1);
       }
 
+      [Fact]
+      public void Test_StringNOTEqual_0()
+      {
+          //Arrange
+          string inputWord = "A";
+          string inputText = "B";
+
+          //ACT
+          RepeatCounter testInput = new RepeatCounter(inputWord, inputText);
+          int testResult = testInput.CountRepeats();
+
+          //Assert
+          Assert.Equal(testResult, 0);
+      }
+
+
   }
 }
