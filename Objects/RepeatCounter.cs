@@ -17,8 +17,12 @@ namespace RepeatCounterApp
         public int CountRepeats()
         {
             int count = 0;
+
+            string wordUpper = _word.ToUpper();
+            string textUpper = _text.ToUpper();
+
             {
-                if (_word == _text)
+                if (wordUpper == textUpper)
                 {
                     count+= 1;
                 }

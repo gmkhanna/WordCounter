@@ -52,6 +52,21 @@ namespace RepeatCounterApp
 
       }
 
+      [Fact]
+      public void Test_StringCompareEqualCaseless_1()
+      {
+          //Arrange
+          string inputWord = "buffalo";
+          string inputText = "BuFFalO";
+
+          //Act
+          RepeatCounter testInput = new RepeatCounter(inputWord, inputText);
+          int testResult = testInput.CountRepeats();
+
+          //Assert
+          Assert.Equal(testResult, 1);
+      }
+
 
 
   }
