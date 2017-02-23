@@ -68,7 +68,7 @@ namespace RepeatCounterApp
       }
 
       [Fact]
-      public void Test_CountLikeWordsInText_2()
+      public void Test_CountLikeWordsInText_8()
       {
           //Arrange
           string inputWord = "buffalo";
