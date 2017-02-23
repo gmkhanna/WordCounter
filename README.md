@@ -33,11 +33,9 @@ Clone the files from github Upload them in an editor Fire up a server and load t
 * **Input:** "Buffalo" **Input:**  "The buffalo is large. Buffalo is my name."
 * **Output:** 2
 
-
-
 ##Known Bugs
 
-_Receiving an error on the foreach loop. This is throwing the 500 error out on the site rendering it unatainable._
+_Accoounts for exact word. Does not account for words with different suffixes (i.e. "behavrior" and "behavioral" would be considered different words.)_
 
 ##Support and contact details
 
