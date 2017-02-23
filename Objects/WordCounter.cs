@@ -5,17 +5,20 @@ namespace RepeatCounter
 {
   public class RepeatCounter
   {
+
+        //Class Variables
     private string _initialWord;
     private string _text;
 
 
     public RepeatCounter(string initialWord, string text)
     {
-
+        //Class Constructor
       _initialWord = initialWord;
       _text = text;
     }
 
+    //Class Methods
     public int CountRepeats()
     {
       int count = 0;
