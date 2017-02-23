@@ -20,9 +20,11 @@ namespace RepeatCounterApp
 
             string wordUpper = _word.ToUpper();
             string textUpper = _text.ToUpper();
+            string[] textSplit = textUpper.Split();
 
+            foreach (string textWord in textSplit)
             {
-                if (wordUpper == textUpper)
+                if (wordUpper == textWord)
                 {
                     count+= 1;
                 }
@@ -30,8 +32,8 @@ namespace RepeatCounterApp
                 {
                     count+= 0;
                 }
-                return count;
             }
+            return count;
         }
 
     }
