@@ -17,20 +17,12 @@ namespace RepeatCounterApp
         public int CountRepeats()
         {
             int count = 0;
-            List<string> textSuffixed = new List<string> {};
 
             string wordUpper = _word.ToUpper();
             string textUpper = _text.ToUpper();
-            var textSplit = textUpper.Split(',').ToList();
-            List<string> suffixes = new List<string> {"", "ING", "IES", "Y", "EY", "TION", "ED", "ES", "ITIS", "ATION", "FY", "'S", "S'", "S"};
+            string[] textSplit = textUpper.Split();
 
-
-            foreach (var element in suffixes)
-            {
-                return textSuffixed = element + textSplit;
-            }
-
-            foreach (string textWord in textSuffixed)
+            foreach (string textWord in textSplit)
             {
                 if (wordUpper == textWord)
                 {

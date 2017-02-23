@@ -72,31 +72,15 @@ namespace RepeatCounterApp
       {
           //Arrange
           string inputWord = "buffalo";
-          string inputText = "The buffalo is large. Buffalo is my name.";
+          string inputText = "The buffalo is large. Buffalo is my name. The buffalo is large. Buffalo is my name. The buffalo is large. Buffalo is my name. The buffalo is large. Buffalo is my name. Buffalo's Rock!";
 
           //Act
           RepeatCounter testInput = new RepeatCounter(inputWord, inputText);
           int testResult = testInput.CountRepeats();
 
           //Assert
-          Assert.Equal(2, testResult);
+          Assert.Equal(8, testResult);
       }
-
-      [Fact]
-      public void Test_CountLikeWordsInTextRegardlessOfSuffix_5()
-      {
-          //Arrange
-          string inputWord = "buffalo";
-          string inputText = "The buffaloes moved the other buffalos food. There is no such word as buffaloies, buffaloing, or buffaloed.";
-
-          //Act
-          RepeatCounter testInput = new RepeatCounter(inputWord, inputText);
-          int testResult = testInput.CountRepeats();
-
-          //Assert
-          Assert.Equal(2, testResult);
-      }
-
 
   }
 }
